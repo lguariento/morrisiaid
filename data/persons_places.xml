@@ -1,0 +1,2044 @@
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Persons and Places</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+
+      <profileDesc>
+         <calendarDesc>
+            <calendar xml:id="iwl_dech_maw">
+               <p>Calendr Iŵl (dech. Maw)</p>
+            </calendar>
+            <calendar xml:id="anhysbys">
+               <p>Anhysbys</p>
+            </calendar>
+            <calendar xml:id="gregorian">
+               <p>calendr Gregori</p>
+            </calendar>
+            <calendar xml:id="iwl_dech_ion">
+               <p>Calendr Iŵl (dech. Ion)</p>
+            </calendar>
+         </calendarDesc>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <listPerson>
+            <person xml:id="pe_001">
+               <persName>
+                  <forename>William</forename>
+                  <surname>Borlase</surname>
+                  <addName>Wm: Borlase</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_002">
+               <persName>
+                  <forename>Josiah</forename>
+                  <surname>Burchett</surname>
+                  <addName>J B</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_003">
+               <persName>
+                  <forename>Ellis</forename>
+                  <surname>Cadwaladr</surname>
+                  <addName>Ellis Cadwalader o Blwy Llandderfel yn agos ir Bala</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_004">
+               <persName>
+                  <forename>Thomas</forename>
+                  <surname>Chambers</surname>
+                  <addName>T. Chambers</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_005">
+               <persName>
+                  <forename>John</forename>
+                  <surname>Charlton</surname>
+                  <addName>John Charlton</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_006">
+               <persName>
+                  <forename>John</forename>
+                  <surname>Clevland</surname>
+                  <addName>J C</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_007">
+               <persName>
+                  <forename>Thomas</forename>
+                  <surname>Corbett</surname>
+                  <addName>T C</addName>
+                  <addName>Thomas Corbett Esqr member of Parliament</addName>
+               </persName>
+            </person>
+
+            <person xml:id="pe_008">
+               <persName>
+                  <forename>Thomas</forename>
+                  <surname>Crosse</surname>
+                  <addName>T Crosse</addName>
+                  <addName>T. C.</addName>
+                  <addName>Thos Crosse Esqr</addName>
+                  <addName>Thos Cross Esqr</addName>
+               </persName>
+            </person>
+
+            <person xml:id="pe_009">
+               <persName>
+                  <forename>Owen</forename>
+                  <surname>Davies</surname>
+                  <addName>Own. Davies</addName>
+                  <addName>Bror.</addName>
+                  <addName>frawd a chwaer</addName>
+               </persName>
+            </person>
+
+            <person xml:id="pe_010">
+               <persName>
+                  <forename>Evan</forename>
+                  <surname>Evans</surname>
+                  <addName>Ev: Evans</addName>
+                  <addName>Ev. Evans</addName>
+                  <addName>Evan Evans</addName>
+                  <addName>Ieuan Fardd</addName>
+                  <addName>Evan Evans; arnodwyd: Revd Evan Evans</addName>
+                  <addName>Evan Evans; arnodwyd: Revd. Evan Evans</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_011">
+               <persName>
+                  <forename>Peter</forename>
+                  <surname>Evans</surname>
+                  <addName>Peter Evans</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_012">
+               <persName>
+                  <forename>Rice</forename>
+                  <surname>Evans</surname>
+                  <addName>Rice Evans</addName>
+               </persName>
+            </person>
+
+            <person xml:id="pe_013">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Evans</surname>
+                  <addName>Y Draenog</addName>
+                  <addName>Mr. death; Mr Richard Evans Surgeon</addName>
+                  <addName>Dr Evans</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_014">
+               <persName>
+                  <forename>Fortunatus</forename>
+                  <surname>Wright</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_015">
+               <persName>
+                  <forename>Owen</forename>
+                  <surname>Holland</surname>
+                  <addName>Owen Holland</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_016">
+               <persName>
+                  <forename>Edward</forename>
+                  <surname>Hughes</surname>
+                  <addName>Iorwerth Fwynwr</addName>
+                  <addName>Edward Hughes; Iorwerth Frych</addName>
+                  <addName>Iorwerth ap Hywel a elwid yn gyffredin Edward Hughers</addName>
+                  <addName>Iorwerth ap Hywel</addName>
+                  <addName>E ag H</addName>
+                  <addName>Iorwerth Dlawd</addName>
+                  <addName>Loving Uncle</addName>
+                  <addName>Garedigol Ewa; Mr Edward Hughes; Edwa/Edwa Hug</addName>
+                  <addName>Y Caredigawl Ewythr; Iorwerth ap Huw</addName>
+                  <addName>Attoch</addName>
+                  <addName>Yr Ewythr Iorwerth</addName>
+                  <addName>Y Caredigawl Ewythr</addName>
+                  <addName>Y Caredigawl Ewythr Iorwerth</addName>
+                  <addName>Y Caredigawl Ewythr Ierw</addName>
+                  <addName>Y Caredigawl Ewa</addName>
+                  <addName>Yr Ewythr Edward Ddiog!</addName>
+                  <addName>Loving Uncle; Mr Edward Hughes</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_017">
+               <persName>
+                  <forename>Hugh</forename>
+                  <surname>Hughes</surname>
+                  <addName>Bardd Moel Dyfrydog</addName>
+                  <addName>Hugh Hughes</addName>
+                  <addName>H.H.</addName>
+                  <addName>Cadwgan hir-Goes</addName>
+                  <addName>Huw ap Huw</addName>
+                  <addName>Huw ap Huw neu'r B--dd Coch o fon</addName>
+                  <addName>Huw ap Huw; arnodwyd: Hugh Hughes Barđ Cox</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_018">
+               <persName>
+                  <forename>Robert</forename>
+                  <surname>Hughes</surname>
+                  <addName>R. Ddu</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_019">
+               <persName>
+                  <forename>John</forename>
+                  <surname>Jones</surname>
+                  <addName>John Jones</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_020">
+               <persName>
+                  <forename>Rhys</forename>
+                  <surname>Jones</surname>
+                  <addName>Rice Jones</addName>
+                  <addName>Rhys Jones</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_021">
+               <persName>
+                  <forename>Thomas</forename>
+                  <surname>Jones</surname>
+                  <addName>arnodwyd: Tho: Jones Esqr.</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_022">
+               <persName>
+                  <forename>William</forename>
+                  <surname>Jones</surname>
+                  <addName>Wm Jones</addName>
+                  <addName>Cousin Wm Jones ap Sion Prisiart Morys o Blas Ofa gynt ymhlwy LlanLlechid
+                     yn Arfon</addName>
+                  <addName>William Jones</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_023">
+               <persName>
+                  <forename>David</forename>
+                  <surname>Lewes</surname>
+                  <addName>David Lewes</addName>
+                  <addName>David Lewis</addName>
+                  <addName/>
+               </persName>
+            </person>
+            <person xml:id="pe_024">
+               <persName>
+                  <forename>Watkin</forename>
+                  <surname>Lewis</surname>
+                  <addName>W. Lewis</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_025">
+               <persName>
+                  <forename>Owen</forename>
+                  <surname>Meyrick</surname>
+                  <addName>O M.</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_026">
+               <persName>
+                  <forename>John</forename>
+                  <surname>Morris</surname>
+                  <addName>Ioan Amhorys</addName>
+                  <addName>John Morris</addName>
+                  <addName>Jno.. Morris</addName>
+                  <addName>Jno Morris</addName>
+                  <addName>Jno. Morris</addName>
+                  <addName>Jno: Morris</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_027">
+               <persName>
+                  <forename>Lewis</forename>
+                  <surname>Morris</surname>
+                  <addName>Lewis Morris, Philomath</addName>
+                  <addName>L. M.</addName>
+                  <addName>L Morris</addName>
+                  <addName>L.M.; arnodwyd L. Morris</addName>
+                  <addName>Llewelyn ddu</addName>
+                  <addName>Sioned vx Wm. Barthur</addName>
+                  <addName>Lln Ddu o Fon</addName>
+                  <addName>LM</addName>
+                  <addName>Elsbath Domas; who is wife of Thomas Rolant who is mate of Tho. Hughes
+                     who is master of ye Carteret who is a ship belonging to Mr Power who is a
+                     Welchman who is an Antient Britain</addName>
+                  <addName>L Morr</addName>
+                  <addName>Llewelyn</addName>
+                  <addName>Llewelyn ddu o Fôn</addName>
+                  <addName>Lewys Morys; Jeffray Chaucer</addName>
+                  <addName>Seren Cwlwm Dog</addName>
+                  <addName>Lewis Morris</addName>
+                  <addName>Llewelyn Ddu</addName>
+                  <addName>Ll. Ddu</addName>
+                  <addName>Llewelyn Fwynwr du</addName>
+                  <addName>Lln. Ddu</addName>
+                  <addName>Darn o lythyr oddi wrth Lewis Morris(Llewelyn Ddu o Fon)</addName>
+                  <addName>Llywelyn</addName>
+                  <addName>Llewelyn ddu … Llewelyn Aurdorchog ardderchog</addName>
+                  <addName>Llewelyn ddu.</addName>
+                  <addName>Llewelyn Ddu o Fôn; Llewelyn ddu.</addName>
+                  <addName>Eich brawd llwyd L.M.</addName>
+                  <addName>Lln-</addName>
+                  <addName>A Cymmrodor</addName>
+                  <addName>Lln -</addName>
+                  <addName>Lln.</addName>
+                  <addName>Lln. Ddulwyd; Lln.</addName>
+                  <addName>Lln. ddu; Lln. etto</addName>
+                  <addName>Llewelyn bendenau</addName>
+                  <addName>arnodwyd: Bror Lewis</addName>
+                  <addName>Brochmaelus Ysgith</addName>
+                  <addName>Lewis Morris; yn y rhagarweiniad i'r copi: Mr. Lewis Morris</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_028">
+               <persName>
+                  <forename>Pryse</forename>
+                  <surname>Morris</surname>
+                  <addName>Pryse Morris; P. M.</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_029">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Morris</surname>
+                  <addName>Rhisierdyn</addName>
+                  <addName>Richd Morris</addName>
+                  <addName>Rhist Fynglwyd</addName>
+                  <addName>Richard Morris</addName>
+                  <addName>Rhist Fynglwyd</addName>
+                  <addName>Rhisiart</addName>
+                  <addName>Rhist Morys</addName>
+                  <addName>R M</addName>
+                  <addName>Rhisiart Morys</addName>
+                  <addName>Rhist. Morys</addName>
+                  <addName>Rhisiart Fynglwyd</addName>
+                  <addName>Rhist: Morus</addName>
+                  <addName>Rhisiart drafferthus</addName>
+                  <addName>R</addName>
+                  <addName>in RM's hand</addName>
+                  <addName>Rhist: Fynglwyd</addName>
+                  <addName>Rhist Amhorys</addName>
+                  <addName>Richd- Morris</addName>
+                  <addName>R.M.</addName>
+                  <addName>Rd: Morris -</addName>
+                  <addName>Richd. Morris</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_030">
+               <persName>
+                  <forename>Robert</forename>
+                  <surname>Morris</surname>
+                  <addName>Robt. Morris</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_031">
+               <persName>
+                  <forename>William</forename>
+                  <surname>Morris</surname>
+                  <addName>Gwilym Cybi</addName>
+                  <addName>Your loving Bror</addName>
+                  <addName>Wm Morris</addName>
+                  <addName>Wm Morris Pen llysieuwr cymru oll</addName>
+                  <addName>WM.</addName>
+                  <addName>Gwilim Cybi</addName>
+                  <addName>Gwilym Morys</addName>
+                  <addName>Gwilym Morus</addName>
+                  <addName>Wm Morris; Gwilym Tew</addName>
+                  <addName>Gwilym Hiraethog</addName>
+                  <addName>Wm. Morris</addName>
+                  <addName>Gwilym Gontrowliwr; WM</addName>
+                  <addName>Gwilym Fynglwyd</addName>
+                  <addName>Gw[ilym Morris]</addName>
+                  <addName>Wm Morris; W.M.</addName>
+                  <addName>Gwilym Ddu o Fôn</addName>
+                  <addName>Gwilym Tew</addName>
+                  <addName>Y Twrch Trwyth</addName>
+                  <addName>Gwilym ddu o Gybi</addName>
+                  <addName>Gwilym Ddu; WM.</addName>
+                  <addName>Gwilym Amhorys</addName>
+                  <addName>Gwilym o Gybi; W.M.</addName>
+                  <addName>Gwilym Ddu o Fôn; W.M.</addName>
+                  <addName>Gwilym o Fôn; WM</addName>
+                  <addName>Gwilym Rwydd-dew</addName>
+                  <addName>Gwilym Lwytu; WM</addName>
+                  <addName>Gwilym Lwyttu</addName>
+                  <addName>Gwilym Fyngfrith; W.M.</addName>
+                  <addName>Gwilym o'r Dollfa; WM</addName>
+                  <addName>Gwilym Gregynwr</addName>
+                  <addName>y Cregynydd; W</addName>
+                  <addName>Gwilym rwyddfras</addName>
+                  <addName>Wm Morris Gregynwr</addName>
+                  <addName>Gwilym y Garddwr</addName>
+                  <addName>Gwilym Dollgoes. neu Goesdoll</addName>
+                  <addName>Gwilym Ogloff</addName>
+                  <addName>Gwilym</addName>
+                  <addName>William y Trydydd</addName>
+                  <addName>Wm Morris; Gwilym y Trydydd [brawd]</addName>
+                  <addName>Gwilym Cybi; Eich Ewythr Wm Morris</addName>
+                  <addName>Gwilym Finllwyd</addName>
+                  <addName>Gwilym Finllwyd o Gaer Gybi ym Mon</addName>
+                  <addName>Eich Brawd tramawr ei ffwdan</addName>
+                  <addName>Gwilym Kybi</addName>
+                  <addName>William</addName>
+                  <addName>Wil Glôff</addName>
+                  <addName>Gwilym Ledffer</addName>
+                  <addName>Will Morris</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_032">
+               <persName>
+                  <forename>John</forename>
+                  <surname>Nape</surname>
+                  <addName>John Nape</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_033">
+               <persName>
+                  <forename>An</forename>
+                  <surname>Owen</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_034">
+               <persName>
+                  <forename>Goronwy</forename>
+                  <surname>Owen</surname>
+                  <addName>Gronow Owen. alias Goronwy Ddu o Fon</addName>
+                  <addName>Gronow Owen</addName>
+                  <addName>Gronwy Ddu Ieuaf, alias Offeiriad, alias Y Bardd Bâch o Fôn</addName>
+                  <addName>Gro. Owen</addName>
+                  <addName>Gronwy Ddu, gynt o Fôn</addName>
+                  <addName>Gronwy Owen</addName>
+                  <addName>Gronwy Ddu Gynt o Fôn</addName>
+                  <addName>Gro. Ddu.</addName>
+                  <addName>Gro: Owen</addName>
+                  <addName>Gronwy Ddu o Fon</addName>
+                  <addName>Gro. Ddu o Fôn</addName>
+                  <addName>G. Ddu</addName>
+                  <addName>Y Du o Hirgaer</addName>
+                  <addName>Y Bardd Du</addName>
+                  <addName>Y Bardd Du o Swydd Gaer Hirfryn</addName>
+                  <addName>G: Owen</addName>
+                  <addName>Gronwy Ddu</addName>
+                  <addName>Gronow Owen; Gronwy Ddu ddicllon</addName>
+                  <addName>Y Du o Fôn</addName>
+                  <addName>Gronovius</addName>
+                  <addName>Gronwy Ddu; [arnodwyd: Revd Gronow Owen]</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_035">
+               <persName>
+                  <forename>John</forename>
+                  <surname>Owen</surname>
+                  <addName>Sion Owen Dafydd</addName>
+                  <addName>Jno: Owen</addName>
+                  <addName>Jno Owen</addName>
+                  <addName>Sion Owain Dafydd</addName>
+                  <addName>Sion Owain ap Dafydd</addName>
+                  <addName>Ioan Fab Ewain</addName>
+                  <addName>Ioan ap Owen; Ioan Delynydd</addName>
+                  <addName>Ioan Owen</addName>
+                  <addName>Ioan Owain</addName>
+                  <addName>eich Nai diffuant Jno Owen</addName>
+                  <addName>Ioan Ewain</addName>
+                  <addName>Ioan Ywain</addName>
+                  <addName>Sion Owain</addName>
+                  <addName>Sion Owain Dafydd ap Huw</addName>
+                  <addName>Jno Owen; Eich nai SION union anwyl/ da was yw, nid oes ei ail / Cawr o
+                     hyd yn curo hoel Gwyr duw hyn, a gwrda hael.</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_036">
+               <persName>
+                  <forename>Lewis</forename>
+                  <surname>Owen</surname>
+                  <addName>Llywelin Deheubarth; [arnodwyd: Llewelyn Deheubarth]</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_037">
+               <persName>
+                  <forename>Margaret</forename>
+                  <surname>Owen</surname>
+                  <addName>Margt Owen</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_038">
+               <persName>
+                  <forename>John</forename>
+                  <surname>Parry</surname>
+                  <addName>John Parry</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_039">
+               <persName>
+                  <forename>William</forename>
+                  <surname>Parry</surname>
+                  <addName>W. Parry</addName>
+                  <addName>William Parry, Esq: Deputy-Comptroler of His Majesty's Mint in the Tower
+                     of London, &amp; Secretary to the Cymmrodorion Society</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_040">
+               <persName>
+                  <forename>Samuel</forename>
+                  <surname>Pegge</surname>
+                  <addName>Samuel Pegge</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_041">
+               <persName>
+                  <forename>Thomas</forename>
+                  <surname>Pennant</surname>
+                  <addName>Tho. Pennant</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_042">
+               <persName>
+                  <forename>James</forename>
+                  <surname>Philipps</surname>
+                  <addName>James Philipps</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_043">
+               <persName>
+                  <forename>Michael</forename>
+                  <surname>Prichard</surname>
+                  <addName>M. P.</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_044">
+               <persName>
+                  <forename>Morris</forename>
+                  <surname>Prichard</surname>
+                  <addName>morris prichad</addName>
+                  <addName>M V M</addName>
+                  <addName>Morus Prichard Morus</addName>
+                  <addName>eich Tâd, Morris Prichard</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_045">
+               <persName>
+                  <forename>Hugh</forename>
+                  <surname>Pryse</surname>
+                  <addName>Hugh Pryse</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_046">
+               <persName>
+                  <forename>Edward</forename>
+                  <surname>Richard</surname>
+                  <addName>Edward Richard</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_047">
+               <persName>
+                  <forename>Thomas</forename>
+                  <surname>Richards</surname>
+                  <addName>Thomas Richards</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_048">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Roberts</surname>
+                  <addName>Richd Robert yn hyttrax Risiart ap Robert; arnodwyd: Rd.
+                     Roberts</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_049">
+               <persName>
+                  <forename>John</forename>
+                  <surname>Roderick</surname>
+                  <addName>Sion Rhydderch</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_050">
+               <persName>
+                  <forename>Edward</forename>
+                  <surname>Samuel</surname>
+                  <addName>Edd. Samuel</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_051">
+               <persName>
+                  <forename>R.</forename>
+                  <surname>Saunders</surname>
+                  <addName>Sir; Reverend mr. R Saunders</addName>
+                  <addName>R. Saunders; arnodwyd: Curator of Whitchurch under ye. Bp Landaff - Welsh
+                     tutor to ye Bps Lady</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_052">
+               <persName>
+                  <forename>John</forename>
+                  <surname>Sharpe</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_053">
+               <persName>
+                  <forename>John</forename>
+                  <surname>Thomas</surname>
+                  <addName>Sion Thomas; arnodwyd: Revd John Thomas</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_054">
+               <persName>
+                  <forename>Robert</forename>
+                  <surname>Thomas</surname>
+                  <addName>Robert Thomas; arnodwyd: Robt Thomas</addName>
+                  <addName>Rob. Thomas</addName>
+                  <addName>R Thomas</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_055">
+               <persName>
+                  <forename>Sion</forename>
+                  <surname>Thomas</surname>
+                  <addName>Siôn Tomos</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_056">
+               <persName>
+                  <surname>Anhysbys[1]</surname>
+                  <addName>yn gâs gan Whigods</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_057">
+               <persName>
+                  <surname>Anhysbys[2]</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_058">
+               <persName>
+                  <surname>Anhysbys[3]</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_059">
+               <persName>
+                  <forename>Thomas</forename>
+                  <surname>Walker</surname>
+                  <addName>T. Walker, Surveyor-General</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_060">
+               <persName>
+                  <forename>Edward</forename>
+                  <surname>Williams</surname>
+                  <addName>E. Williams</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_061">
+               <persName>
+                  <forename>Hugh</forename>
+                  <surname>Williams</surname>
+                  <addName>Hugh Williams; arnodwyd: Revd. Hugh Williams</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_062">
+               <persName>
+                  <forename>William</forename>
+                  <surname>Wynn</surname>
+                  <addName>Wm. Wynn</addName>
+                  <addName>Wm. Wynn; arnodwyd: Revd. Wm. Wynn</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_063">
+               <persName>
+                  <forename>William</forename>
+                  <surname>Owen</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_064">
+               <persName>
+                  <forename>Thomas</forename>
+                  <surname>Ellis</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_065">
+               <persName>
+                  <forename>Rhisiart Siôn</forename>
+                  <surname>Prys</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_066">
+               <persName>
+                  <forename>Owen</forename>
+                  <surname>Morris</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_067">
+               <persName>
+                  <forename>Owen</forename>
+                  <surname>Gruffudd</surname>
+                  <addName>Fy Nhydwladwr Caredigfwyn; Owen ... Mab Gruffydd</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_068">
+               <persName>
+                  <surname>Anhysbys[4]</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_069">
+               <persName>
+                  <forename>Hugh</forename>
+                  <surname>Bulkeley</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_070">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Bulkeley</surname>
+                  <addName>Sr; The Revd Richard Bulkeley; or in his Absence, to Mr. Hugh
+                     Bulkeley</addName>
+                  <addName>Sir; the Revd. Mr Richard Bulkeley; or in his Absence, to Mr. Hugh
+                     Bulkeley</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_071">
+               <persName>
+                  <forename>William</forename>
+                  <surname>Bulkeley</surname>
+                  <addName>Sr..; Wm. Bulkeley Brynddu Esqr.</addName>
+                  <addName>Sir; William Bulklely Esqr.</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_072">
+               <persName>
+                  <forename>Thomas</forename>
+                  <surname>Carte</surname>
+                  <addName>T. Carte</addName>
+                  <addName>Sr.; Mr Tho. Carte</addName>
+                  <addName>Sr.; the Reverend Mr. Carte</addName>
+                  <addName>Sr.; Mr. Carte</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_073">
+               <persName>
+                  <forename>Zachariah</forename>
+                  <surname>Chambers</surname>
+                  <addName>Zachariah Chambers, Esqr</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_074">
+               <persName>
+                  <forename>William</forename>
+                  <surname>Corbett</surname>
+                  <addName>Wm Corbett Esqr</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_075">
+               <persName>
+                  <surname>Cymmrodorion Society</surname>
+                  <addName>Anrhydeddus Gymdeithas y Cymrodorion yn Llundain</addName>
+                  <addName>yr anrhydeddus a'r hybarch Gymdeithas o Gymmrodorion; the Worshipfull The
+                     President Vice Presidents &amp; others of the worthy Members of the Society of
+                     Cymmrodorion</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_076">
+               <persName>
+                  <forename>John</forename>
+                  <surname>Evans</surname>
+                  <addName>Gyfaill; Revd Jno. Evans A.M. Chaplain Whitehall</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_077">
+               <persName>
+                  <forename>Thomas</forename>
+                  <surname>Evans</surname>
+                  <addName>Mr Thos Evans</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_078">
+               <persName>
+                  <forename>Henry Arthur</forename>
+                  <surname>Herbert</surname>
+                  <addName>Rt. Honble the Earl of Powis</addName>
+                  <addName>My Lord</addName>
+                  <addName>Earl of Powis</addName>
+                  <addName>My Lord; the Right Honble the Earl of Powis</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_079">
+               <persName>
+                  <forename>Gwilym</forename>
+                  <surname>Howell</surname>
+                  <addName>Mr. Wm Howel</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_080">
+               <persName>
+                  <forename>David (Dafydd)</forename>
+                  <surname>Jones</surname>
+                  <addName>Dafydd Jones</addName>
+                  <addName>Dewi Fardd</addName>
+                  <addName>Dewi Fwyn da iawn ei fod, i fywhau Henwau hynod</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_081">
+               <persName>
+                  <forename>Marged</forename>
+                  <surname>Jones</surname>
+                  <addName>Mrs. Margad Jones</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_082">
+               <persName>
+                  <surname>Mr Jones</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_083">
+               <persName>
+                  <forename>Owen</forename>
+                  <surname>Jones</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_084">
+               <persName>
+                  <forename>J.</forename>
+                  <surname>Knox</surname>
+                  <addName>J. Knox</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_085">
+               <persName>
+                  <forename>Anne</forename>
+                  <surname>Langford</surname>
+                  <addName>Mrs. Langford; arnodwyd Mrs. Anne Langford</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_086">
+               <persName>
+                  <forename>Thomas</forename>
+                  <surname>Llewelyn</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_087">
+               <persName>
+                  <forename>Rees</forename>
+                  <surname>Lloyd</surname>
+                  <addName>Sr.; Mr. Rees Lloyd</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_088">
+               <persName>
+                  <forename>Michael</forename>
+                  <surname>Lort</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_089">
+               <persName>
+                  <forename>William</forename>
+                  <surname>Middleton</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_090">
+               <persName>
+                  <forename>Anne</forename>
+                  <surname>Morris</surname>
+                  <addName>nee Lloyd</addName>
+                  <addName>Sister</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_091">
+               <persName>
+                  <forename>Elin</forename>
+                  <surname>Morris</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_092">
+               <persName>
+                  <surname>Mount</surname>
+                  <addName>Mr. Mount</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_093">
+               <persName>
+                  <forename>Humphrey</forename>
+                  <surname>Owen</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_094">
+               <persName>
+                  <forename>George</forename>
+                  <surname>Parker</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_095">
+               <persName>
+                  <forename>Zachary</forename>
+                  <surname>Pearce</surname>
+                  <addName>Bishop of Bangor</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_096">
+               <persName>
+                  <forename>Anne</forename>
+                  <surname>Penny</surname>
+                  <addName>Madam; Mrs. Penny</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_097">
+               <persName>
+                  <forename>Ambrose</forename>
+                  <surname>Philipps</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_098">
+               <persName>
+                  <forename>Ellis</forename>
+                  <surname>Price</surname>
+                  <addName>Mr. Ellis Price</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_099">
+               <persName>
+                  <forename>J Pugh</forename>
+                  <surname>Price</surname>
+                  <addName>Sr; arnodwyd: J Pugh Pryse Esqr.</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_101">
+               <persName>
+                  <forename>Morys </forename>
+                  <surname>Prisiart</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_100">
+               <persName>
+                  <forename>Marged</forename>
+                  <surname>Morris</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_102">
+               <persName>
+                  <forename>Henry</forename>
+                  <surname>Reade</surname>
+                  <addName>Sir; H. Reade Esqr.</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_103">
+               <persName>
+                  <forename>Y Trysorlys</forename>
+               </persName>
+            </person>
+            <person xml:id="pe_104">
+               <persName>
+                  <surname>Anhysbys[5]</surname>
+               </persName>
+            </person>
+
+            <person xml:id="pe_105">
+               <persName>
+                  <surname>Anhysbys[6]</surname>
+                  <addName>Sir.</addName>
+               </persName>
+            </person>
+
+            <person xml:id="pe_106">
+               <persName>
+                  <surname>Anhysbys[7]</surname>
+               </persName>
+            </person>
+
+            <person xml:id="pe_107">
+               <persName>
+                  <surname>Anhysbys[8]</surname>
+                  <addName>Sir.</addName>
+               </persName>
+            </person>
+
+            <person xml:id="pe_108">
+               <persName>
+                  <surname>Anhysbys[9]</surname>
+               </persName>
+            </person>
+
+            <person xml:id="pe_109">
+               <persName>
+                  <surname>Anhysbys[10]</surname>
+               </persName>
+            </person>
+
+            <person xml:id="pe_110">
+               <persName>
+                  <surname>Anhysbys[11]</surname>
+               </persName>
+            </person>
+
+            <person xml:id="pe_111">
+               <persName>
+                  <surname>Anhysbys[12]</surname>
+                  <addName>W Sbarbwch; Syra</addName>
+               </persName>
+            </person>
+
+            <person xml:id="pe_112">
+               <persName>
+                  <surname>Anhysbys[13]</surname>
+                  <addName>Y Caredigawl Anwyliaid</addName>
+               </persName>
+            </person>
+
+            <person xml:id="pe_113">
+               <persName>
+                  <surname>Anhysbys[14]</surname>
+                  <addName>Sir</addName>
+               </persName>
+            </person>
+
+            <person xml:id="pe_114">
+               <persName>
+                  <surname>Anhysbys[15]</surname>
+                  <addName>Most Venerable Father</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_115">
+               <persName>
+                  <forename>Gwynn</forename>
+                  <surname>Vaughan</surname>
+               </persName>
+            </person>
+
+            <person xml:id="pe_116">
+               <persName>
+                  <forename>William</forename>
+                  <surname>Vaughan</surname>
+                  <addName>Fy nghydwladwr mwynlan</addName>
+                  <addName>Anrhydeddus Syr</addName>
+                  <addName>y Parchedig ar anrhydeddus Frawd Du o Nannau</addName>
+                  <addName>Bendefig</addName>
+                  <addName>Urddasol bendefig</addName>
+                  <addName>Barchedig Sr.</addName>
+                  <addName>Anrhydeddus Sr.</addName>
+                  <addName>Wm Vaughan Esqr</addName>
+                  <addName>Anrhydeddus Syr; Wm Vaughan Esq.</addName>
+                  <addName>Worthy Sr; Mr Vaughan Nannau</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_117">
+               <persName>
+                  <forename>James</forename>
+                  <surname>Watkins</surname>
+                  <addName>Fy Anwyl Gyfaill yn y Wlad Draw</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_118">
+               <persName>
+                  <forename>Peter</forename>
+                  <surname>Williams</surname>
+                  <addName>Barchedig Syr; arnodwyd: Revd Peter Williams</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_119">
+               <persName>
+                  <forename>Edward</forename>
+                  <surname>Wynne</surname>
+                  <addName>Sir; Mr. Bulkeley</addName>
+               </persName>
+            </person>
+            <person xml:id="pe_120">
+               <persName>
+                  <forename>Richard</forename>
+                  <surname>Morris y mab</surname>
+               </persName>
+            </person>            
+            <person xml:id="pe_121">
+               <persName>
+                  <forename>Lewis</forename>
+                  <surname>Morris y mab</surname>
+               </persName>
+            </person>
+            <person xml:id="pe_122">
+               <persName>
+                  <surname>Jenkins</surname>
+               </persName>
+            </person>              
+         </listPerson>
+         <listPlace>
+            <place xml:id="pl_001">
+               <placeName>
+                  <geogName>Aberdaugleddau, Sir Benfro</geogName>
+                  <addName>Milford Haven</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_002">
+               <placeName>
+                  <geogName>Aberffraw, Ynys Môn</geogName>
+                  <addName>Aberffraw</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_003">
+               <placeName>
+                  <geogName>Aberdyfi, Sir Feirionnydd</geogName>
+                  <addName>Aberdovey</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_004">
+               <placeName>
+                  <geogName>Aberystwyth, Ceredigion</geogName>
+                  <addName>Aberystwyth</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_005">
+               <placeName>
+                  <geogName>11 Beaufort Buildings, Strand, Llundain</geogName>
+               </placeName>
+            </place>
+            <place xml:id="pl_006">
+               <placeName>
+                  <geogName>Acton, Llundain</geogName>
+                  <addName>Lond.</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_007">
+               <placeName>
+                  <geogName>Anatolia, Twrci (Yr Ymerodraeth Otomanaidd)</geogName>
+                  <addName>Natolia</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_008">
+               <placeName>
+                  <geogName>Bae Sarn Badrig, Mochras, Sir Feirionnydd</geogName>
+                  <addName>Sarn Badrig Bay</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_009">
+               <placeName>
+                  <geogName>Bangor, Sir Gaernarfon</geogName>
+                  <addName>Bangor</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_010">
+               <placeName>
+                  <geogName>Bermo, Sir Feirionnydd</geogName>
+                  <addName>By Griff. Simon of Abermaw I write this'</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_011">
+               <placeName>
+                  <geogName>Bishop's Castle, Swydd Amwythig</geogName>
+                  <addName>Bishop's Castle in Shropshire</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_012">
+               <placeName>
+                  <geogName>Ynys Môn</geogName>
+               </placeName>
+            </place>
+            <place xml:id="pl_013">
+               <placeName>
+                  <geogName>Biwmares, Ynys Môn</geogName>
+                  <addName>Bewmaris</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_014">
+               <placeName>
+                  <geogName>Black Stakes, Medway</geogName>
+                  <addName>on board the Torbay</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_015">
+               <placeName>
+                  <geogName>Blaenau, Llanfachreth, Sir Feirionnydd</geogName>
+                  <addName>Blaenau</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_016">
+               <placeName>
+                  <geogName>Dulas, Ynys Môn</geogName>
+                  <addName>Dulas</addName>
+                  <addName>Dylas</addName>
+                  <addName>Dulas in Anglesey</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_017">
+               <placeName>
+                  <geogName>Llundain</geogName>
+                  <addName>Caerludd</addName>
+                  <addName>London</addName>
+                  <addName>Llundain fygyd</addName>
+                  <addName>Caerludd</addName>
+                  <addName>Lond.</addName>
+                  <addName>Llund.</addName>
+                  <addName>Caer Lundein</addName>
+                  <addName>Troia Newydd</addName>
+                  <addName>Dinas Lundain</addName>
+                  <addName>Caer Droia Newydd</addName>
+                  <addName>Ynghaerludd</addName>
+                  <addName>Llundain Goch</addName>
+                  <addName>Tro newydd</addName>
+                  <addName>Cae Ludd</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_018">
+               <placeName>
+                  <geogName>Brynddu, Llanfechell, Ynys Môn</geogName>
+                  <addName>Brynddu</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_019">
+               <placeName>
+                  <geogName>Caergybi, Ynys Môn</geogName>
+                  <addName>H'head</addName>
+                  <addName>Caer Gybi: ym Môn</addName>
+                  <addName>Holyhead</addName>
+                  <addName>Haulyhead</addName>
+                  <addName>Caergybi</addName>
+                  <addName>Caer Sant Cybi</addName>
+                  <addName>Pen caergybi</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_020">
+               <placeName>
+                  <geogName>Llandyfrydog, Ynys Môn</geogName>
+                  <addName>Llandyfrydog</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_021">
+               <placeName>
+                  <geogName>Cyfeiriad Anhysbys</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_022">
+               <placeName>
+                  <geogName>Penllyn, Sir Feirionnydd</geogName>
+                  <addName>penllyn</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_023">
+               <placeName>
+                  <geogName>Coleg yr Iesu, Prifysgol Rhydychen, Swydd Rydychen</geogName>
+                  <addName>Jes. Coll.</addName>
+                  <addName>Jes: Colle Oxon</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_024">
+               <placeName>
+                  <geogName>Tŷ Coffi Jack, Dean Street, Soho, Llundain</geogName>
+                  <addName>Jack's Coffee House in Dean Street, Soho</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_025">
+               <placeName>
+                  <geogName>Kington, Swydd Henffordd</geogName>
+                  <addName>Kingston, Herefordshire</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_026">
+               <placeName>
+                  <geogName>Towcester, Swydd Northampton</geogName>
+                  <addName>Towcester</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_027">
+               <placeName>
+                  <geogName>Burlington Gardens, Llundain</geogName>
+                  <addName>Burlington Garden</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_028">
+               <placeName>
+                  <geogName>Lovel's Court, Paternoster Row, Llundain</geogName>
+                  <addName>Lovel Court Paternoster Row</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_029">
+               <placeName>
+                  <geogName>Pant y Benne, Llanboidy, Sir Gaerfyrddin</geogName>
+                  <addName>Pant y Benne</addName>
+                  <addName>Pant y Benne in Llanboydy Parish</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_030">
+               <placeName>
+                  <geogName>Llanandras, Sir Faesyfed</geogName>
+                  <addName>Presteign in Radnorshire</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_031">
+               <placeName>
+                  <geogName>Llanbrynmair, Sir Drefaldwyn</geogName>
+                  <addName>Llanbrynmair</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_032">
+               <placeName>
+                  <geogName>Llanfair-ym-muallt, Sir Frycheiniog a Sir Faesyfed</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_033">
+               <placeName>
+                  <geogName>Galltfadog, Aberystwyth, Ceredigion</geogName>
+                  <addName>Gallt Vadog</addName>
+                  <addName>Galltvadog, near Aberystwyth</addName>
+                  <addName>Galltvadog</addName>
+                  <addName>Gallt y Felltith</addName>
+                  <addName>Gallt Madogyn</addName>
+                  <addName>From my Hermitage at Galltvadog</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_034">
+               <placeName>
+                  <geogName>Rhiwabon, Wrecsam</geogName>
+                  <addName>Rhiwabon</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_035">
+               <placeName>
+                  <geogName>Tollty Caergybi, Ynys Môn</geogName>
+                  <addName>Customho Holyhd.</addName>
+                  <addName>Custs: Holyhead</addName>
+                  <addName>Tollfa Cybi</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_036">
+               <placeName>
+                  <geogName>Llangrallo, Sir Forgannwg</geogName>
+                  <addName>Coychurch</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_037">
+               <placeName>
+                  <geogName>Rhydychen, Swydd Rydychen</geogName>
+                  <addName>Oxford</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_038">
+               <placeName>
+                  <geogName>Wimbledon, Llundain</geogName>
+                  <addName>Wimbledon</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_039">
+               <placeName>
+                  <geogName>Llandeilo Fawr, Sir Gaerfyrddin</geogName>
+                  <addName>Llandeilo Vawr</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_040">
+               <placeName>
+                  <geogName>Cwmsymlog, Ceredigion</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                <place xml:id="pl_041">
+               <placeName>
+                  <geogName>Swyddfa'r Llynges, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_042">
+               <placeName>
+                  <geogName>Tavistock Place, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_043">
+               <placeName>
+                  <geogName>Coleg Merton, Prifysgol Rhydychen, Swydd Rydychen</geogName>
+                  <addName>Oxford Merton Coll.</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_044">
+               <placeName>
+                  <geogName>Llangynhafal, Sir Ddinbych</geogName>
+                  <addName>Llan-Gynhafal</addName>
+                  <addName>Llangynhaval</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_045">
+               <placeName>
+                  <geogName>Esgair-mwyn, Ffair Rhos, Ceredigion</geogName>
+                  <addName>Esgair y Mwyn Mine</addName>
+                  <addName>Esgair y Mwyn</addName>
+               </placeName>
+            </place>
+                <place xml:id="pl_046">
+               <placeName>
+                  <geogName>Farlington, Hampshire</geogName>
+                  <addName>Farlington</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_047">
+               <placeName>
+                  <geogName>Lyminge, Caint</geogName>
+                  <addName>Lyminge</addName>
+               </placeName>
+            </place>
+            <place xml:id="pl_049">
+               <placeName>
+                  <geogName>Yr Eglwys Wen, Swydd Amwythig</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_050">
+               <placeName>
+                  <geogName>Tŷ Gwyn, Ynys Môn</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_051">
+               <placeName>
+                  <geogName>Penbryn, Goginan, Ceredigion</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_052">
+               <placeName>
+                  <geogName>Llanfigel, Ynys Môn</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_053">
+               <placeName>
+                  <geogName>Llong Ei Fawrhydi 'Aurora', Portsmouth, Hampshire</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_054">
+               <placeName>
+                  <geogName>Llanllechid, Sir Gaernarfon</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_055">
+               <placeName>
+                  <geogName>Ystrad Meurig, Ceredigion</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_056">
+               <placeName>
+                  <geogName>Trefriw, Conwy</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_057">
+               <placeName>
+                  <geogName>Whittington, Swydd Derby</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_058">
+               <placeName>
+                  <geogName>Llwydiarth, Ynys Môn</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_059">
+               <placeName>
+                  <geogName>Cilgwyn</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                <place xml:id="pl_060">
+               <placeName>
+                  <geogName>Crosswood (hamlet), Ceredigion</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_061">
+               <placeName>
+                  <geogName>Llandrindod, Sir Faesyfed</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                <place xml:id="pl_062">
+               <placeName>
+                  <geogName>Conwy, Conwy</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_063">
+               <placeName>
+                  <geogName>Llanfair Talhaearn, Sir Ddinbych</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_064">
+               <placeName>
+                  <geogName>Dinas Mawddwy, Sir Feirionnydd</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_065">
+               <placeName>
+                  <geogName>Plas Hen</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                <place xml:id="pl_066">
+               <placeName>
+                  <geogName>Cwmystwyth, Ceredigion</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_067">
+               <placeName>
+                  <geogName>Sgwâr Bloomsbury, Bloomsbury, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                <place xml:id="pl_068">
+               <placeName>
+                  <geogName>Y Tŵr Gwyn, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_069">
+               <placeName>
+                  <geogName>Fferm Cynhawdref, Lledrod, Ceredigion</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_070">
+               <placeName>
+                  <geogName>Mabws, Ceredigion</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_071">
+               <placeName>
+                  <geogName>Rye, Dwyrain Sussex</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_072">
+               <placeName>
+                  <geogName>Newick, Dwyrain Sussex</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_073">
+               <placeName>
+                  <geogName>Cowden, Caint</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_074">
+               <placeName>
+                  <geogName>Llangadfan, Sir Drefaldwyn</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_075">
+               <placeName>
+                  <geogName>Llanrhaeadr, Sir Ddinbych</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                <place xml:id="pl_076">
+               <placeName>
+                  <geogName>Rhif 34, Stryd y Bathdy, Y Tŵr Gwyn, Llundain</geogName>
+                  <addName>No 34, Mint-street, the Tower</addName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_077">
+               <placeName>
+                  <geogName>Swyddfa'r Llynges, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_078">
+               <placeName>
+                  <geogName>Tumlook, India</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_079">
+               <placeName>
+                  <geogName>Calcutta, Bengal, India</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_080">
+               <placeName>
+                  <geogName>Deheudir Cymru</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_081">
+               <placeName>
+                  <geogName>Pentre-eiriannell, Penrhosllugwy, Ynys Môn</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_082">
+               <placeName>
+                  <geogName>Chwitffordd, Sir y Fflint</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_083">
+               <placeName>
+                  <geogName>Ystafell John Owen, Stryd Pennington, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_084">
+               <placeName>
+                  <geogName>Llanfair Clydogau, Ceredigion</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_085">
+               <placeName>
+                  <geogName>Donnington, Sir Amwythig</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_086">
+               <placeName>
+                  <geogName>Sir Amwythig</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_087">
+               <placeName>
+                  <geogName>Walton, Sir Gaerhirfryn</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_088">
+               <placeName>
+                  <geogName>Tafarn y 'Bell', West Smithfield, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_089">
+               <placeName>
+                  <geogName>Northolt, Middlesex</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_090">
+               <placeName>
+                  <geogName>llong: Y 'Trial', Spithead, Hampshire</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_091">
+               <placeName>
+                  <geogName>Swydd Brunswick, Virginia</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_092">
+               <placeName>
+                  <geogName>Tŵr Llundain, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_093">
+               <placeName>
+                  <geogName>Nannau, Llanfachreth, Sir Feirionnydd</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_094">
+               <placeName>
+                  <geogName>Llannerch-y-medd, Ynys Môn</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                <place xml:id="pl_095">
+               <placeName>
+                  <geogName>Pwllheli, Sir Gaernarfon</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_096">
+               <placeName>
+                  <geogName>Solfach, Sir Benfro</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                <place xml:id="pl_098">
+               <placeName>
+                  <geogName>Penfro, Sir Benfro</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_099">
+               <placeName>
+                  <geogName>Hakin, Sir Benfro</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_100">
+               <placeName>
+                  <geogName>Dolgellau, Sir Feirionnydd</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_101">
+               <placeName>
+                  <geogName>Lerpwl, Glannau Merswy</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_102">
+               <placeName>
+                  <geogName>Chatham, Swydd Gaint</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_103">
+               <placeName>
+                  <geogName>Llong Ei Fawrhydi 'Torbay' (1693), Black Stakes, Medway</geogName>
+                           <addName/>
+                        </placeName>
+
+            </place>
+            <place xml:id="pl_104">
+               <placeName>
+                  <geogName>Llong Ei Fawrhydi 'Torbay', Spithead, Hampshire</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_105">
+               <placeName>
+                  <geogName>Spithead, Hampshire</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_106">
+               <placeName>
+                  <geogName>St. Hellen's Road, Portsmouth, Hampshire</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_107">
+               <placeName>
+                  <geogName>Llong Ei Fawrhydi 'Torbay', Tor Bay, Dyfnaint</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+
+            <place xml:id="pl_109">
+               <placeName>
+                  <geogName>Castle Bromwich, Solihull, Gorllewin Canolbarth Lloegr</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_110">
+               <placeName>
+                  <geogName>Esgair-mwyn, Ceredigion</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                <place xml:id="pl_111">
+               <placeName>
+                  <geogName>Hopkins and Taylor,
+                     Westminster, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_112">
+               <placeName>
+                  <geogName>Towerhill, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+
+            <place xml:id="pl_114">
+               <placeName>
+                  <geogName>Llanenddwyn, Sir Feirionnydd</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_116">
+               <placeName>
+                  <geogName>Bryn yr Haf, Caergybi, Ynys Môn</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_117">
+               <placeName>
+                  <geogName>Stryd Pennington, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_119">
+               <placeName>
+                  <geogName>Phoenix Park, Dulyn, Leinster, Iwerddon</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_120">
+               <placeName>
+                  <geogName>Stryd Cowley, Westminster, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_121">
+               <placeName>
+                  <geogName>Downing, Sir y Fflint</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_122">
+               <placeName>
+                  <geogName>Ludgvan, Cernyw</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                <place xml:id="pl_123">
+               <placeName>
+                  <geogName>Westminster, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_124">
+               <placeName>
+                  <geogName>Y Deml Fewnol, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_125">
+               <placeName>
+                  <geogName>Bodedern, Ynys Môn</geogName>
+                    </placeName>
+            </place>
+            <place xml:id="pl_126">
+               <placeName>
+                  <geogName>Biwmares, Ynys Môn</geogName>
+               </placeName>
+            </place>
+            <place xml:id="pl_127">
+               <placeName>
+                  <geogName>Bodewryd, Bodewryd, Ynys Môn</geogName>
+               </placeName>
+            </place>
+            <place xml:id="pl_128">
+               <placeName>
+                  <geogName>Bodorgan, Bodorgan, Ynys Môn</geogName>
+               </placeName>
+            </place>
+                        <place xml:id="pl_129">
+               <placeName>
+                  <geogName>Brynddu, Llanfechell, Ynys Môn</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_130">
+               <placeName>
+                  <geogName>Cadeirlan Christ Church, Dulyn, Gweriniaeth Iwerddon</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_131">
+               <placeName>
+                  <geogName>Caerfyrddin, Sir Gaerfyrddin</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_133">
+               <placeName>
+                  <geogName>Corsygedol, Llanddwywe, Sir Feirionnydd</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_134">
+               <placeName>
+                  <geogName>Dronwy, Llanfachraeth, Ynys Môn</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_135">
+               <placeName>
+                  <geogName>Dulyn, Leinster, Gweriniaeth Iwerddon</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_136">
+               <placeName>
+                  <geogName>Fritham, Hampshire</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_139">
+               <placeName>
+                  <geogName>Glynllifon, Llandwrog, Sir Gaernarfon</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_140">
+               <placeName>
+                  <geogName>Goginan, Ceredigion</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_141">
+               <placeName>
+                  <geogName>Golden Lion, Dean Street, Soho, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_142">
+               <placeName>
+                  <geogName>Haymarket, Westminster, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_143">
+               <placeName>
+                  <geogName>Limer Lodge, Sir Drefaldwyn</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_144">
+               <placeName>
+                  <geogName>Llanfihangel Crucornau, Sir Fynwy</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_145">
+               <placeName>
+                  <geogName>Llanidloes, Sir Drefaldwyn</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_146">
+               <placeName>
+                  <geogName>Llansadwrn, Ynys Môn</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_147">
+               <placeName>
+                  <geogName>Llwydiarth, Ynys Môn</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_149">
+               <placeName>
+                  <geogName>Maesygroes, Cymru</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_150">
+               <placeName>
+                  <geogName>dan ofal Mr Stainsby, Stryd yr Eglwys, Soho, Llundain</geogName>
+                  <addName>Church Street, Soho, Llundain</addName>
+               </placeName>
+            </place>
+                        <place xml:id="pl_151">
+               <placeName>
+                  <geogName>Pant y Benne, Llanboidy, Sir Gaerfyrddin</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+            <place xml:id="pl_152">
+               <placeName>
+                  <geogName>rhif 4 Harvey Court, Strand, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_153">
+               <placeName>
+                  <geogName>Rhif 4, Y Deml Ganol, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_155">
+               <placeName>
+                  <geogName>Southall, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_156">
+               <placeName>
+                  <geogName>St James's Street, St James's, Westminster, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_157">
+               <placeName>
+                  <geogName>Swyddfa Bost, Aberystwyth, Ceredigion</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_158">
+               <placeName>
+                  <geogName>Tafarn y Ship, Dolgellau, Sir Feirionnydd</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_159">
+               <placeName>
+                  <geogName>Tafarn yr 'Half Moon', Cheapside, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_160">
+               <placeName>
+                  <geogName>Tafarndy'r Half Moon, Cheapside, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_161">
+               <placeName>
+                  <geogName>Tŷ'r Cyffredin, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_162">
+               <placeName>
+                  <geogName>Wapping, Llundain Fawr</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_163">
+               <placeName>
+                  <geogName>Watlington, Swydd Rydychen</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_164">
+               <placeName>
+                  <geogName>Whitehall, Westminster, Llundain</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_165">
+               <placeName>
+                  <geogName>Y Dref Wen, Swydd Amwythig</geogName>
+                  <addName/>
+               </placeName>
+            </place>
+                        <place xml:id="pl_166">
+               <placeName>
+                  <geogName>Y Morlys, Llundain</geogName>
+               </placeName>
+                        </place>
+            <place xml:id="pl_167">
+               <placeName>
+                  <geogName>Tŷ John Nicholas, Dulyn, Leinster, Iwerddon</geogName>
+               </placeName>
+            </place>
+         </listPlace>
+         
+      </body>
+   </text>
+</TEI>

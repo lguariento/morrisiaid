@@ -1,0 +1,111 @@
+<div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
+    <div class="grid-x grid-margin-x">
+        <h1 data-template="config:app-title">Generated page</h1>
+        <br/>
+    </div>
+
+    <div class="grid-x grid-margin-x">
+        <!-- <div style="text-align: center;" class="cell">
+            <button class="button" onclick="advanced_search()">Advanced search <span id="advancedSearchArrow" class="fi-expand-down"/>
+            </button>
+
+        </div> -->
+        <div class="cell callout" id="advanced_search">
+            <form id="advancedSearch" action="modules/advanced_search.xq" method="post" onsubmit="advancedSearch(this); return false;">
+                <div class="grid-container">
+                    <div class="pepl grid-x grid-padding-x">
+                        <div class="cell">
+                            <input id="both" type="checkbox" name="both"/>
+                            <label for="both">Oddi wrth ac at</label>
+                        </div>
+                        <div class="medium-3 cell">
+                            <input id="from" type="text" placeholder="Oddi wrth"/>
+
+                            <input type="hidden" name="pe1id" id="id-holder-from"/>
+                        </div>
+                        <div class="medium-3 cell">
+                            <input id="to" type="text" placeholder="At"/>
+
+                            <input type="hidden" name="pe2id" id="id-holder-to"/>
+                        </div>
+                        <div class="medium-3 cell">
+                            <input id="origin" type="text" placeholder="Man ysgrifennu"/>
+
+                            <input type="hidden" name="plid" id="id-holder-origin"/>
+                        </div>
+                        <div class="medium-3 cell">
+                            <input id="source" type="text" placeholder="Source"/>
+                            <input type="hidden" name="sourceRef" id="id-holder-source"/>
+                        </div>
+
+                        
+                    </div>
+                    <div class="grid-x grid-margin-x">
+                        <div class="cell small-8">
+                            <div class="slider" id="slider" data-aria-valuemin="1725" data-aria-valuemax="1786" data-slider="data-slider" data-start="1725" data-end="1786" data-initial-start="1725" data-initial-end="1786">
+                                <span id="handle1" class="slider-handle" data-slider-handle="data-slider-handle" role="slider" tabindex="1" aria-controls="dateFrom"/>
+                                <span class="slider-fill" data-slider-fill="data-slider-fill"/>
+                                <span id="handle2" class="slider-handle" data-slider-handle="data-slider-handle" role="slider" tabindex="1" aria-controls="dateTo"/>
+                            </div>
+
+                        </div>
+
+                        <div class="cell small-2">
+                            <input type="number" max="1786" min="1725" id="dateFrom" name="dateFrom"/>
+                        </div>
+                        <div class="cell small-2">
+                            <input type="number" max="1786" min="1725" id="dateTo" name="dateTo"/>
+                        </div>
+                        
+                    </div>
+
+
+                
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-5">
+                        <p>Cynnwys llythyrau heb ddyddiad neu â'r flwyddyn yn eisiau</p>
+                    </div>
+                    <div class="cell small-4 switch small">
+                        <input class="switch-input" checked="checked" id="includeUndated" type="checkbox" name="includeUndated"/>
+                            <label class="switch-paddle" for="includeUndated">
+                                <span class="show-for-sr">Cynnwys llythyrau heb ddyddiad neu â'r flwyddyn yn eisiau</span>
+                                <span class="switch-active" aria-hidden="true">Ie</span>
+                                <span class="switch-inactive" aria-hidden="true">Na</span>
+                            </label>
+                    </div>
+                    <button id="advancedSearchSubmit" type="submit" class="cell small-3 button">Cyflwyno</button>
+                    <!--<button type="button" class="cell small-4 large-offset-6 button warning" onclick="advancedSearchFromDetail('reset')">Reset the table and show all
+                        records</button>-->
+
+                </div>
+                </div>
+            </form>
+
+
+        
+        <div class="grid-x grid-padding-x">
+            
+        </div>
+            
+        </div>
+        <div class="cell">
+            <table id="mainTable" class="tdisplay dataTable">
+                <thead>
+                    <tr>
+                        <th>Dyddiad</th>
+                        <th>Awdur</th>
+                        <th>Derbynnydd</th>
+                        <th>Tarddiad</th>
+                        <th>Cyrchfan</th>
+                        <th/>
+                    </tr>
+                </thead>
+                <tbody id="mainTableRows">
+
+                    <tr data-template="app:mainTable"/>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</div>

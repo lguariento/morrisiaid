@@ -3,9 +3,10 @@ xquery version "3.1";
 import module namespace functx = 'http://www.functx.com';
 declare namespace output="http://www.w3.org/2010/xslt-xquery-serialization";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
-
 declare option output:method "json";
 declare option output:media-type "application/json";
+
+(:: this is a new comment :)
 
 array {
       let $pe1id := request:get-parameter("pe1id", ())[. ne ""]

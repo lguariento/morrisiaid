@@ -1,158 +1,135 @@
 xquery version "3.1";
 
-import module namespace functx = 'http://www.functx.com';
+(: Receive user-supplied query parameters, query fields, and format results. 
+ : If no parameters are received, show all results. 
+ :
+ : Compared to the earlier version without fields, the performance of this query
+ : is much better, because we used fields to pre-compute and pre-construct so many 
+ : of the values that we previously had to do at query time.
+ : 
+ : @see https://exist-db.org/exist/apps/doc/lucene#facets-and-fields
+ :)
+
 declare namespace output="http://www.w3.org/2010/xslt-xquery-serialization";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
+declare namespace search = "https://www.porth.ac.uk/morrisiaid/search";
+
 declare option output:method "json";
 declare option output:media-type "application/json";
 
-(:: this is a new comment :)
 
-array {
-      let $pe1id := request:get-parameter("pe1id", ())[. ne ""]
-      let $pe2id := request:get-parameter('pe2id', ())[. ne ""]
-      let $both := request:get-parameter('both', ())[. ne ""]
-      let $plid := request:get-parameter('plid', ())[. ne ""]
-      let $dateFrom := request:get-parameter("dateFrom", (''))[. ne ""]
-      let $dateTo := request:get-parameter("dateTo", ())[. ne ""]
-      let $sourceRef := request:get-parameter("sourceRef", ())[. ne ""]
-      
-     let $indicesPersons := doc('/db/apps/app-morrisiaid/data/persons_places.xml')//tei:listPerson
-     let $indicesPlaces := doc('/db/apps/app-morrisiaid/data/persons_places.xml')//tei:listPlace
-     
-    let $doc := doc("/db/apps/app-morrisiaid/data/master_file.xml")
-     for $record at $pos in $doc//tei:item[
-    every $condition in (
-        if ($pe1id ne '') then 
-            tei:ab[@type eq "sent" and ./tei:persName[@ref eq $pe1id]]/@ref= $pe1id or
-            (if ($both eq 'on') then tei:ab[@type eq "received" and ./tei:persName[@ref eq $pe1id]]/@ref = $pe1id else false())
-        else 
-            true(),
-        if ($pe2id ne '') then
-            tei:ab[@type eq "received" and ./tei:persName[@ref eq $pe2id]]/@ref = $pe2id
-        else 
-            true(),
-        if ($plid ne '') then
-            tei:ab[@type eq "sent" and ./tei:placeName[@ref eq $plid]]/@ref= $plid
-        else 
-            true(),
-        if ($sourceRef ne '') then
-            .[@xml:id eq $sourceRef]/@xml:id= $sourceRef
-        else 
-            true(),
+declare function search:detail() {
+let $pe1id := request:get-parameter("pe1id", ())[. ne ""]
+let $pe2id := request:get-parameter("pe2id", ())[. ne ""]
+let $both := request:get-parameter("both", "false")[. ne ""] cast as xs:boolean
+let $plid := request:get-parameter("plid", ())[. ne ""]
+let $dateFrom := request:get-parameter("dateFrom", ())[. ne ""]
+let $dateTo := request:get-parameter("dateTo", ())[. ne ""]
+let $sourceRef := request:get-parameter("sourceRef", ())[. ne ""]
 
-        (: If the date does not have a trailing '-' it means that it is complete :)
-        if (exists(tei:ab[@type eq 'sent']/tei:date/@when) and substring(tei:ab[@type eq 'sent']/tei:date/@when, 1, 1) ne '-') then
-            
-            xs:int(substring(tei:ab[@type eq 'sent']/tei:date/@when, 1, 4)) ge xs:int($dateFrom)
-            and
-            xs:int(substring(tei:ab[@type eq 'sent']/tei:date/@when, 1, 4)) le xs:int($dateTo)
-        
-            
-            (: ...otherwise it means that the year is missing and it's incomplete. If that's the case,
-            check if the checkbox 'incomplete' is checked or not. If it is checked, the condition is true and
-            the portion of the $condition is true. The form submits the includeUndated parameter as "on" if checked,
-            so we will check for that too.    
-            
-        else if ($includeUndated eq 'on' or $includeUndated eq 'true') then
-                true()  :)
-         else true()
-    ) satisfies $condition
-]
-    
-    let $dateSent := data($record/tei:ab[@type="sent"]/tei:date/@when)
-     
-     (: alternative code :)
-     
-         let $personSentNumber := count($record/tei:ab[@type eq "sent"]/tei:persName)
-    let $personSentFullName :=
+let $indicesPersons := doc("/db/apps/app-morrisiaid/data/persons_places.xml")//tei:listPerson
+let $indicesPlaces := doc("/db/apps/app-morrisiaid/data/persons_places.xml")//tei:listPlace
+let $doc := doc("/db/apps/app-morrisiaid/data/master_file.xml")
+
+let $start-time := util:system-dateTime()
+
+let $all-records := $doc//tei:item
+let $query-string := 
+    string-join(
         (
-         for $personSent in $record/tei:ab[@type = "sent"]/tei:persName
-         let $personSentID := $personSent/@ref/string()
-         return $indicesPersons/tei:person/id($personSentID)/tei:persName/string-join((./tei:forename/text(),./tei:surname/text())," ")
-        ) ! (if (position() > 1) then ('; ', .) else .)
-        
-    
-    let $personReceivedNumber := count($record/tei:ab[@type eq "received"]/tei:persName)
-    let $personReceivedFullName :=
-        (
-         for $personReceived in $record/tei:ab[@type = "sent"]/tei:persName
-         let $personReceivedID := $personReceived/@ref/string()
-         return $indicesPersons/tei:person/id($personReceivedID)/tei:persName/string-join((./tei:forename/text(),./tei:surname/text())," ")
-        ) ! (if (position() > 1) then ('; ', .) else .)
-        
-    let $placeSentNumber := count($record/tei:ab[@type="sent"]/tei:placeName)
-        let $placeSentName := 
-        for $placeSent in $record/tei:ab[@type="sent"]/tei:placeName
-        let $placeSentID := $placeSent/@ref/string()
-        let $placeSentgeogName := $indicesPlaces/tei:place[@xml:id=$placeSentID]/tei:placeName/tei:geogName
-        return $placeSentgeogName ! (if (position() > 1) then ('; ', .) else .)
-
-    let $placeReceivedNumber := count($record/tei:ab[@type="sent"]/tei:placeName)
-        let $placeReceivedName := 
-        for $placeReceived in $record/tei:ab[@type="sent"]/tei:placeName
-        let $placeReceivedID := $placeReceived/@ref/string()
-        let $placeReceivedgeogName := $indicesPlaces/tei:place[@xml:id=$placeReceivedID]/tei:placeName/tei:geogName
-        return $placeReceivedgeogName ! (if (position() > 1) then ('; ', .) else .)
-        
-     (:
-     let $personSentNumber := count($record/tei:ab[@type="sent"]/tei:persName)
-        let $personSentFullName := 
-        for $personSent at $pos in $record/tei:ab[@type="sent"]/tei:persName
-        let $personSentID := data($personSent/@ref)
-        let $personSentForename := $indicesPersons/tei:person[@xml:id=$personSentID]/tei:persName/tei:forename
-        let $personSentSurname := $indicesPersons/tei:person[@xml:id=$personSentID]/tei:persName/tei:surname
-        let $fullNameSent := if ($personSentNumber eq ($pos)) then $personSentForename || ' ' || $personSentSurname else $personSentForename || ' ' || $personSentSurname || '; '
-        return $fullNameSent
-         
-    let $personReceivedNumber := count($record/tei:ab[@type="received"]/tei:persName)
-        let $personReceivedFullName := 
-        for $personReceived at $pos in $record/tei:ab[@type="received"]/tei:persName
-        let $personReceivedID := data($personReceived/@ref)
-        let $personReceivedForename := $indicesPersons/tei:person[@xml:id=$personReceivedID]/tei:persName/tei:forename
-        let $personReceivedSurname := $indicesPersons/tei:person[@xml:id=$personReceivedID]/tei:persName/tei:surname
-        let $fullNameReceived := if ($personReceivedNumber eq ($pos)) then $personReceivedForename || ' ' || $personReceivedSurname else $personReceivedForename || ' ' || $personReceivedSurname || '; '
-        return $fullNameReceived
-    
-    let $placeSentNumber := count($record/tei:ab[@type="sent"]/tei:placeName)
-        let $placeSentName := 
-        for $placeSent at $pos in $record/tei:ab[@type="sent"]/tei:placeName
-        let $placeSentID := data($placeSent/@ref)
-        let $placeSentgeogName := $indicesPlaces/tei:place[@xml:id=$placeSentID]/tei:placeName/tei:geogName
-        let $placeSent := if ($placeSentNumber eq ($pos)) then $placeSentgeogName else $placeSentgeogName || '; '
-        return $placeSent
-
-    let $placeReceivedNumber := count($record/tei:ab[@type="received"]/tei:placeName)
-        let $placeReceivedName := 
-        for $placeReceived at $pos in $record/tei:ab[@type="received"]/tei:placeName
-        let $placeReceivedID := data($placeReceived/@ref)
-        let $placeReceivedgeogName := $indicesPlaces/tei:place[@xml:id=$placeReceivedID]/tei:placeName/tei:geogName
-        let $placeReceived := if ($placeReceivedNumber eq ($pos)) then $placeReceivedgeogName else $placeReceivedgeogName || '; '
-        return $placeReceived 
-    :)
-    
-    let $id := <a href="detail.html?emloID={data($record/@xml:id)}"><span class="fi-envelope-open"></span></a>
-    
+            if (exists($pe1id)) then
+                (
+                    "sender-ids:" || $pe1id,
+                    if ($both) then
+                        "recipient-ids:" || $pe1id
+                    else
+                        ()
+                )
+            else
+                (),
+            if (exists($pe2id)) then
+                "recipient-ids:" || $pe2id
+            else
+                (),
+            if (exists($plid)) then
+                (
+                    "sent-place-ids:" || $plid,
+                    "recieved-place-ids:" || $plid
+                )
+            else
+                (),
+            if (exists($dateFrom) and exists($dateTo)) then
+                'date-sent:["' || $dateFrom || '" TO "' || $dateTo || '"]'
+            else if (exists($dateFrom)) then
+                'date-sent:["' || $dateFrom || '" TO *]'
+            else if (exists($dateTo)) then
+                'date-sent:[* TO "' || $dateTo || '"]'
+            else
+                ()
+        ), 
+        " "
+    )[. ne ""]
+let $options := 
+    map { 
+        (: https://exist-db.org/exist/apps/doc/lucene#parameters :)
+        "default-operator": "and",
+        "phrase-slop": 0,
+        "leading-wildcard": "no",
+        "filter-rewrite": "yes",
+        (: https://exist-db.org/exist/apps/doc/lucene#retrieve-fields :)
+        "fields": 
+            (
+                "date-sent", 
+                "sender-names", 
+                "recipient-names", 
+                "place-sent-names", 
+                "place-received-names"
+            ) 
+    }
+let $records := $all-records[ft:query(., $query-string, $options)]
+let $results :=
+    for $record in $records
+    let $dateSent := ft:field($record, "date-sent")
+    let $personSentFullNames := ft:field($record, "sender-names")
+    let $personReceivedFullNames := ft:field($record, "recipient-names")
+    let $placeSentNames := ft:field($record, "place-sent-names")
+    let $placeReceivedNames := ft:field($record, "place-received-names")
+    let $id := <a href="detail.html?emloID={$record/@xml:id}"><span class="fi-envelope-open"/></a>
     return
-    
-    (:<tr><td><a href="../detail.html?emloID={$id}">{$id}</a></td><td>{$dateSent}</td><td>{$personSentFullName}</td><td>{$personReceivedFullName}</td></tr>:)
-    
-    
-         map {
-         '0': $dateSent,
-         '1': $personSentFullName,
-         '2': $personReceivedFullName,
-         '3': $placeSentName,
-         '4': $placeReceivedName,
-         '5': $id,
-         '6': $sourceRef}
-         }
-    
-    (:let $doc := doc("/db/apps/app-dined/data/cards/cards.xml")
-    let $p1-entries := $doc//tei:persName[@ref eq $id1]/ancestor::tei:div[@type eq "entry"]
-    let $p2-entries := $doc//tei:persName[@ref eq $id2]/ancestor::tei:div[@type eq "entry"]
-    let $entries := $p1-entries intersect $p2-entries
-    for $entry in $entries
-    let $date_raw := $entry//tei:date/@when
-    return
-       'yes, on ' || $date_raw:)
+        map {
+            "dateSent": $dateSent,
+            "personSentFullName": $personSentFullNames,
+            "personReceivedFullName": $personReceivedFullNames,
+            "placeSentName": $placeSentNames,
+            "placeReceivedName": $placeReceivedNames,
+            "id": $id,
+            "sourceRef": $sourceRef
+        }
+        
+let $end-time := util:system-dateTime()
+
+return
+    map { 
+        "request": map {
+            "pe1id": $pe1id,
+            "pe2id": $pe2id,
+            "both": $both,
+            "plid": $plid,
+            "dateFrom": $dateFrom,
+            "dateTo": $dateTo,
+            "sourceRef": $sourceRef
+        },
+        "lucene": map {
+            "query-string": $query-string,
+            "options": $options
+        },
+        "statistics": map {
+            "result-count": count($results),
+            "start-time": $start-time,
+            "end-time": $end-time,
+            "duration": ($end-time - $start-time) div xs:dayTimeDuration("PT1S") || "s"
+        },
+        "results":
+            array { $results }
+    }
+};

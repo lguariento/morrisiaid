@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <meta xmlns="http://exist-db.org/xquery/repo">
     <description>Mynegai i Ohebiaeth Morrisiaid Môn, 1725–1786</description>
     <author>Luca Guariento</author>
@@ -10,4 +11,4 @@
     <prepare>pre-install.xql</prepare>
     <finish/>
 
-<deployed>2020-10-08T12:47:35.31+01:00</deployed></meta>
+</meta>

@@ -26,3 +26,8 @@
    overflow-y: auto;
    overflow-x: hidden;
 }
+
+#main-container {
+    margin-bottom: 3rem;
+
+}

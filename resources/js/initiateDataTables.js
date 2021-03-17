@@ -16,17 +16,24 @@ $(document).ready(function () {
             
             "columns":[ {
                 "orderable": true,
-                "className": "dateSent"
+                "className": "dateSent",
+                "data": "dateSent"
+                
             }, {
-                "orderable": false
+                "orderable": false,
+                "data": "personSentFullName"
             }, {
-                "orderable": false
+                "orderable": false,
+                "data": "personReceivedFullName"
             }, {
-                "orderable": false
+                "orderable": false,
+                "data": "placeSentName"
             }, {
-                "orderable": false
+                "orderable": false,
+                "data": "placeReceivedName"
             }, {
-                "orderable": false
+                "orderable": false,
+                "data": "id"
             }]
         });
         

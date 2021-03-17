@@ -102,8 +102,7 @@ let $results :=
             "personReceivedFullName": $personReceivedFullNames,
             "placeSentName": $placeSentNames,
             "placeReceivedName": $placeReceivedNames,
-            "id": $id,
-            "sourceRef": $sourceRef
+            "id": $id
         }
         
 let $end-time := util:system-dateTime()
@@ -133,3 +132,5 @@ return
             array { $results }
     }
 };
+
+search:detail()

@@ -6,11 +6,32 @@ declare namespace tei = "http://www.tei-c.org/ns/1.0";
 import module namespace templates = "http://exist-db.org/xquery/templates";
 import module namespace config = "https://www.porth.ac.uk/morrisiaid/config" at "config.xqm";
 
-import module namespace search = "https://www.porth.ac.uk/morrisiaid/search" at "advanced_search.xq";
-
 declare variable $app:doc := doc('/db/apps/app-morrisiaid/data/master_file.xml');
 declare variable $app:indicesPersons := doc('/db/apps/app-morrisiaid/data/persons_places.xml')//tei:listPerson;
 declare variable $app:indicesPlaces := doc('/db/apps/app-morrisiaid/data/persons_places.xml')//tei:listPlace;
+
+
+(:~
+ : This is a sample templating function. It will be called by the templating module if
+ : it encounters an HTML element with an attribute: data-template="app:test" or class="app:test" (deprecated). 
+ : The function has to take 2 default parameters. Additional parameters are automatically mapped to
+ : any matching request or function parameter.
+ : 
+ : @param $node the HTML node with the attribute which triggered this call
+ : @param $model a map containing arbitrary data - used to pass information between template calls
+ :)
+
+(:
+declare function app:getFullName($id, $type, $howMany) {
+ 
+        for $person at $pos in $app:doc//tei:item[@xml:id=$id]/tei:ab[@type=$type]/tei:persName
+        let $personID := data($person/@ref)
+        let $personForename := $app:indicesPersons/tei:person[@xml:id=$personID]/tei:persName/tei:forename
+        let $personSurname := $app:indicesPersons/tei:person[@xml:id=$personID]/tei:persName/tei:surname
+        let $fullName := if ($howMany eq ($pos)) then $personForename || ' ' || $personSurname else $personForename || ' ' || $personSurname || '; '
+        return $fullName 
+
+}; :)
 
 declare function app:mainTable($node as node(), $model as map(*), $advancedSearch, $pe1id, $both, $pe2id, $plid, $dateFrom, $dateTo, $sourceRef) {
     

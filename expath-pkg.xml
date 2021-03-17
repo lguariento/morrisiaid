@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package xmlns="http://expath.org/ns/pkg" name="http://10.21.1.32/apps/app-morrisiaid" abbrev="Morrisiaid" version="1" spec="1.0">
+<package xmlns="http://expath.org/ns/pkg" name="http://colegcymraeg.ac.uk/ns/pkg/morrisiaid" abbrev="morrisiaid" version="1.0.0" spec="1.0">
     <title>Mynegai i Ohebiaeth Morrisiaid Môn, 1725–1786</title>
     <dependency package="http://exist-db.org/apps/shared"/>
 </package>

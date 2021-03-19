@@ -96,12 +96,16 @@ declare function mf:get-date-sent($item as element(tei:item)) as xs:string? {
 declare function mf:get-year-sent($item as element(tei:item)) as xs:string? {
     let $date := mf:get-date-sent($item)
     return
-        if (starts-with($date, "-")) then
-                ($date)
-            else if ($date eq ()) then
-                ''            
-            else 
-                substring($date, 1, 4)
+        (: Even if date is empty, we still populate the year-sent field with an empty string 
+         : to ensure the record isn't omitted from results when the year-sent field is queried :)
+        if ($date eq ()) then
+            ""
+        (: A date that begins with a "-" has an unknown year. Store the full unknown date
+         : in the year-sent field. :)
+        else if (starts-with($date, "-")) then
+            $date
+        else 
+            substring($date, 1, 4)
 };
 
 (: ================ :)

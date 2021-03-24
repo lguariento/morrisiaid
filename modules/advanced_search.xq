@@ -27,8 +27,6 @@ let $dateFrom := request:get-parameter("dateFrom", ())[. ne ""]
 let $dateTo := request:get-parameter("dateTo", ())[. ne ""]
 let $sourceRef := request:get-parameter("sourceRef", ())[. ne ""]
 
-let $indicesPersons := doc("/db/apps/app-morrisiaid/data/persons_places.xml")//tei:listPerson
-let $indicesPlaces := doc("/db/apps/app-morrisiaid/data/persons_places.xml")//tei:listPlace
 let $doc := doc("/db/apps/app-morrisiaid/data/master_file.xml")
 
 let $start-time := util:system-dateTime()
@@ -57,15 +55,15 @@ let $query-string :=
                     "recieved-place-ids:" || $plid
                 )
             else
-                ()
-            (:, if (exists($dateFrom) and exists($dateTo)) then
-                'date-sent:["' || $dateFrom || '" TO "' || $dateTo || '"]'
+                (), 
+            if (exists($dateFrom) and exists($dateTo)) then
+                'year-sent:["' || $dateFrom || '" TO "' || $dateTo || '"]'
             else if (exists($dateFrom)) then
-                'date-sent:["' || $dateFrom || '" TO *]'
+                'year-sent:["' || $dateFrom || '" TO *]'
             else if (exists($dateTo)) then
-                'date-sent:[* TO "' || $dateTo || '"]'
+                'year-sent:[* TO "' || $dateTo || '"]'
             else
-                () :) 
+                ()
         ), 
         " "
     )[. ne ""]
@@ -95,7 +93,6 @@ let $results :=
     let $placeSentNames := ft:field($record, "place-sent-names")
     let $placeReceivedNames := ft:field($record, "place-received-names")
     let $id := <a href="detail.html?emloID={$record/@xml:id}"><span class="fi-envelope-open"/></a>
-    where ft:field($record, "date-sent") ge $dateFrom and ft:field($record, "date-sent") le $dateTo
     return
         map {
             "dateSent": $dateSent,

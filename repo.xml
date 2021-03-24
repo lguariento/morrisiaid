@@ -8,6 +8,6 @@
     <copyright>true</copyright>
     <type>application</type>
     <target>app-morrisiaid</target>
-    <prepare>pre-install.xql</prepare>
-    <finish/>
+    <prepare/>
+    <finish>post-install.xq</finish>
 </meta>

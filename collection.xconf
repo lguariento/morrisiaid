@@ -2,7 +2,7 @@
 <collection xmlns="http://exist-db.org/collection-config/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <index>
         <lucene>
-            <module uri="http://morrisiaid.colegcymraeg.ac.uk/ns/xquery/fields" prefix="mf" at="/db/apps/morrisiaid/modules/morris-fields.xqm"/>
+            <module uri="http://morrisiaid.colegcymraeg.ac.uk/ns/xquery/fields" prefix="mf" at="modules/morris-fields.xqm"/>
             <text qname="tei:item">
                 <field name="date-sent" expression="mf:get-date-sent(.)"/>
                 <field name="year-sent" expression="mf:get-year-sent(.)"/>

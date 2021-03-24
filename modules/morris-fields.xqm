@@ -8,8 +8,8 @@ module namespace mf = "http://morrisiaid.colegcymraeg.ac.uk/ns/xquery/fields";
 
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 
-declare variable $mf:indicesPersons := doc("/db/apps/app-morrisiaid/data/persons_places.xml")//tei:listPerson;
-declare variable $mf:indicesPlaces := doc("/db/apps/app-morrisiaid/data/persons_places.xml")//tei:listPlace;
+declare variable $mf:indicesPersons := doc("/db/apps/morrisiaid/data/persons_places.xml")//tei:listPerson;
+declare variable $mf:indicesPlaces := doc("/db/apps/morrisiaid/data/persons_places.xml")//tei:listPlace;
 
 (: ====================================================== :)
 (: Functions called by collection.xconf field definitions :)

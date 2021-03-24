@@ -6,9 +6,9 @@ declare namespace tei = "http://www.tei-c.org/ns/1.0";
 import module namespace templates = "http://exist-db.org/xquery/templates";
 import module namespace config = "https://www.porth.ac.uk/morrisiaid/config" at "config.xqm";
 
-declare variable $app:doc := doc('/db/apps/app-morrisiaid/data/master_file.xml');
-declare variable $app:indicesPersons := doc('/db/apps/app-morrisiaid/data/persons_places.xml')//tei:listPerson;
-declare variable $app:indicesPlaces := doc('/db/apps/app-morrisiaid/data/persons_places.xml')//tei:listPlace;
+declare variable $app:doc := doc('/db/apps/morrisiaid/data/master_file.xml');
+declare variable $app:indicesPersons := doc('/db/apps/morrisiaid/data/persons_places.xml')//tei:listPerson;
+declare variable $app:indicesPlaces := doc('/db/apps/morrisiaid/data/persons_places.xml')//tei:listPlace;
 
 
 (:~
@@ -40,10 +40,10 @@ declare function app:mainTable($node as node(), $model as map(*), $advancedSearc
         
         array {
             
-            let $indicesPersons := doc('/db/apps/app-morrisiaid/data/persons_places.xml')//tei:listPerson
-            let $indicesPlaces := doc('/db/apps/app-morrisiaid/data/persons_places.xml')//tei:listPlace
+            let $indicesPersons := doc('/db/apps/morrisiaid/data/persons_places.xml')//tei:listPerson
+            let $indicesPlaces := doc('/db/apps/morrisiaid/data/persons_places.xml')//tei:listPlace
             
-            let $doc := doc("/db/apps/app-morrisiaid/data/master_file.xml")
+            let $doc := doc("/db/apps/morrisiaid/data/master_file.xml")
             for $record at $pos in $doc//tei:item[
             every $condition in (
             if ($pe1id ne '') then 
@@ -279,9 +279,9 @@ declare function app:detail($node as node(), $model as map(*), $emloID) {
         }
     </parameters>
     
-    let $app:doc := doc('/db/apps/app-morrisiaid/data/master_file.xml')
-    let $app:indicesPersons := doc('/db/apps/app-morrisiaid/data/persons_places.xml')//tei:listPerson
-    let $app:indicesPlaces := doc('/db/apps/app-morrisiaid/data/persons_places.xml')//tei:listPlace
+    let $app:doc := doc('/db/apps/morrisiaid/data/master_file.xml')
+    let $app:indicesPersons := doc('/db/apps/morrisiaid/data/persons_places.xml')//tei:listPerson
+    let $app:indicesPlaces := doc('/db/apps/morrisiaid/data/persons_places.xml')//tei:listPlace
     let $record := $app:doc//tei:item[@xml:id = $emloID]
     
     let $id := $emloID
@@ -487,7 +487,7 @@ declare function app:detail($node as node(), $model as map(*), $emloID) {
     
     (: manifestations :)
     
-    let $manifestationsDoc := doc('/db/apps/app-morrisiaid/data/manifestations.xml')
+    let $manifestationsDoc := doc('/db/apps/morrisiaid/data/manifestations.xml')
     let $manifestationsDoc_how_many := count($manifestationsDoc//tei:item[tei:ref/text() eq $emloID])
     let $manifestations := for $manifestation at $pos in $manifestationsDoc//tei:item[tei:ref/text() eq $emloID]
     let $type := data($manifestation/tei:msDesc/@type)

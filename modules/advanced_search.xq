@@ -27,7 +27,7 @@ let $dateFrom := request:get-parameter("dateFrom", ())[. ne ""]
 let $dateTo := request:get-parameter("dateTo", ())[. ne ""]
 let $sourceRef := request:get-parameter("sourceRef", ())[. ne ""]
 
-let $doc := doc("/db/apps/app-morrisiaid/data/master_file.xml")
+let $doc := doc("/db/apps/morrisiaid/data/master_file.xml")
 
 let $start-time := util:system-dateTime()
 

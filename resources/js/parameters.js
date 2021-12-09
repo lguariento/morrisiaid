@@ -1,4 +1,4 @@
-$(document).ready(function () {
+function parameters () {$(document).ready(function () {
 
 if (window.location.pathname.includes('index.html')) {
     
@@ -58,3 +58,4 @@ if (window.location.pathname.includes('index.html')) {
         document.getElementById('dateTo').value = dateTo;
     }
 });
+}

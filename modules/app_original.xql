@@ -6,9 +6,9 @@ declare namespace tei = "http://www.tei-c.org/ns/1.0";
 import module namespace templates = "http://exist-db.org/xquery/templates";
 import module namespace config = "https://www.porth.ac.uk/morrisiaid/config" at "config.xqm";
 
-declare variable $app:doc := doc('/db/apps/morrisiaid/data/master_file.xml');
-declare variable $app:indicesPersons := doc('/db/apps/morrisiaid/data/persons_places.xml')//tei:listPerson;
-declare variable $app:indicesPlaces := doc('/db/apps/morrisiaid/data/persons_places.xml')//tei:listPlace;
+declare variable $app:doc := doc('/db/apps/app-morrisiaid/data/master_file.xml');
+declare variable $app:indicesPersons := doc('/db/apps/app-morrisiaid/data/persons_places.xml')//tei:listPerson;
+declare variable $app:indicesPlaces := doc('/db/apps/app-morrisiaid/data/persons_places.xml')//tei:listPlace;
 
 
 (:~
@@ -33,98 +33,11 @@ declare function app:getFullName($id, $type, $howMany) {
 
 }; :)
 
-declare function app:mainTable($node as node(), $model as map(*), $advancedSearch, $pe1id, $pe2id, $both, $plid, $sourceRef, $dateFrom, $dateTo) {
+declare function app:mainTable($node as node(), $model as map(*), $advancedSearch, $pe1id, $both, $pe2id, $plid, $dateFrom, $dateTo, $sourceRef) {
     
     if ($advancedSearch eq 'yes') then
-    
-        let $doc := doc("/db/apps/app-morrisiaid/data/master_file.xml")
-
-let $start-time := util:system-dateTime()
-
-let $all-records := $doc//tei:item
-let $query-pe1 := 
-
-        (
-            if ($pe1id ne '') then
-                (
-                    if ($both eq "false") then
-                        "sender-ids:" || $pe1id
-                    else if ($both eq "true") then
-                        "(sender-ids:" || $pe1id || " OR recipient-ids:" || $pe1id || ")"
-                    else
-                        ()
-                )
-            else
-                ()
-        )
-let $query-pe2 := 
-        (
-            if ($pe2id ne '') then
-                "recipient-ids:" || $pe2id
-            else
-                ()
-        )
-let $query-place :=
-        (
-            if ($plid ne '') then
-                (
-                    "(place-sent-ids:" || $plid || " OR place-received-ids:" || $plid || ")"
-                )
-            else
-                ()
-        )
-let $query-date :=
-        (
-            if ($dateFrom eq '1725' and $dateTo eq '1786') then
-                ()
-            else 
-                "year-sent:[" || $dateFrom || " TO " || $dateTo || "]"
-            (: else if (exists($dateFrom)) then
-                'year-sent:["' || $dateFrom || '" TO *]'
-            else if (exists($dateTo)) then
-                'year-sent:[* TO "' || $dateTo || '"]'
-                :)
-        )
         
-let $query-string := normalize-space($query-pe1 || " " || $query-pe2 || " " || $query-place || " " || $query-date)[. ne ""]
-
-let $options := 
-    map { 
-        (: https://exist-db.org/exist/apps/doc/lucene#parameters :)
-        "default-operator": "and",
-        "phrase-slop": 0,
-        "leading-wildcard": "no",
-        "filter-rewrite": "yes",
-        (: https://exist-db.org/exist/apps/doc/lucene#retrieve-fields :)
-        "fields": 
-            (
-                "date-sent", 
-                "sender-names", 
-                "recipient-names", 
-                "place-sent-names", 
-                "place-received-names"
-            ) 
-    }
-let $records := $all-records[ft:query(., $query-string, $options)]
-
-    for $record in $records
-    let $dateSent := ft:field($record, "date-sent")
-    let $personSentFullNames := ft:field($record, "sender-names")
-    let $personReceivedFullNames := ft:field($record, "recipient-names")
-    let $placeSentNames := ft:field($record, "place-sent-names")
-    let $placeReceivedNames := ft:field($record, "place-received-names")
-    let $id := <a href="detail.html?emloID={data($record/@xml:id)}"><span class="fi-envelope-open"/></a>
-    
-let $end-time := util:system-dateTime()
-
-return
-
-            <tr><td>{$dateSent}</td><td>{$personSentFullNames}</td><td>{$personReceivedFullNames}</td>
-                    <td>{$placeSentNames}</td><td>{$placeReceivedNames}</td><td><a
-                            class='detailLink'
-                            href="detail.html?emloID={$id}"><span
-                                class="fi-envelope-open"></span></a></td></tr>
-        (:
+        
         array {
             
             let $indicesPersons := doc('/db/apps/app-morrisiaid/data/persons_places.xml')//tei:listPerson
@@ -309,9 +222,6 @@ return
                         class='detailLink'
                         href="detail.html?emloID={$id}"><span
                             class="fi-envelope-open"></span></a></td></tr>
-                            :)
-                            
-       else ()
 };
 
 declare function app:detail($node as node(), $model as map(*), $emloID) {

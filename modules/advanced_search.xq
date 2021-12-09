@@ -21,52 +21,63 @@ declare option output:media-type "application/json";
 declare function search:detail() {
 let $pe1id := request:get-parameter("pe1id", ())[. ne ""]
 let $pe2id := request:get-parameter("pe2id", ())[. ne ""]
-let $both := request:get-parameter("both", "false")[. ne ""] cast as xs:boolean
+let $both := request:get-parameter("both", "false")[. ne ""]
 let $plid := request:get-parameter("plid", ())[. ne ""]
 let $dateFrom := request:get-parameter("dateFrom", ())[. ne ""]
 let $dateTo := request:get-parameter("dateTo", ())[. ne ""]
 let $sourceRef := request:get-parameter("sourceRef", ())[. ne ""]
 
-let $doc := doc("/db/apps/morrisiaid/data/master_file.xml")
+let $doc := doc("/db/apps/app-morrisiaid/data/master_file.xml")
 
 let $start-time := util:system-dateTime()
 
 let $all-records := $doc//tei:item
-let $query-string := 
-    string-join(
+let $query-pe1 := 
+
         (
             if (exists($pe1id)) then
                 (
-                    "sender-ids:" || $pe1id,
-                    if ($both) then
-                        "recipient-ids:" || $pe1id
+                    if ($both eq "false") then
+                        "sender-ids:" || $pe1id
+                    else if ($both eq "on" or $both eq "true") then
+                        "(sender-ids:" || $pe1id || " OR recipient-ids:" || $pe1id || ")"
                     else
                         ()
                 )
             else
-                (),
+                ()
+        )
+let $query-pe2 := 
+        (
             if (exists($pe2id)) then
                 "recipient-ids:" || $pe2id
             else
-                (),
+                ()
+        )
+let $query-place :=
+        (
             if (exists($plid)) then
                 (
-                    "sent-place-ids:" || $plid,
-                    "recieved-place-ids:" || $plid
+                    "(place-sent-ids:" || $plid || " OR place-received-ids:" || $plid || ")"
                 )
             else
-                (), 
-            if (exists($dateFrom) and exists($dateTo)) then
-                'year-sent:["' || $dateFrom || '" TO "' || $dateTo || '"]'
-            else if (exists($dateFrom)) then
+                ()
+        )
+let $query-date :=
+        (
+            if ($dateFrom eq '1725' and $dateTo eq '1786') then
+                ()
+            else 
+                "year-sent:[" || $dateFrom || " TO " || $dateTo || "]"
+            (: else if (exists($dateFrom)) then
                 'year-sent:["' || $dateFrom || '" TO *]'
             else if (exists($dateTo)) then
                 'year-sent:[* TO "' || $dateTo || '"]'
-            else
-                ()
-        ), 
-        " "
-    )[. ne ""]
+                :)
+        )
+        
+let $query-string := normalize-space($query-pe1 || " " || $query-pe2 || " " || $query-place || " " || $query-date)[. ne ""]
+
 let $options := 
     map { 
         (: https://exist-db.org/exist/apps/doc/lucene#parameters :)
@@ -92,16 +103,16 @@ let $results :=
     let $personReceivedFullNames := ft:field($record, "recipient-names")
     let $placeSentNames := ft:field($record, "place-sent-names")
     let $placeReceivedNames := ft:field($record, "place-received-names")
-    let $id := <a href="detail.html?emloID={$record/@xml:id}"><span class="fi-envelope-open"/></a>
+    let $id := <a href="detail.html?emloID={data($record/@xml:id)}"><span class="fi-envelope-open"/></a>
     return
         map {
-            "dateSent": $dateSent,
-            "personSentFullName": $personSentFullNames,
-            "personReceivedFullName": $personReceivedFullNames,
-            "placeSentName": $placeSentNames,
-            "placeReceivedName": $placeReceivedNames,
-            "id": $id,
-            "sourceRef": $sourceRef
+            "0": $dateSent,
+            "1": $personSentFullNames,
+            "2": $personReceivedFullNames,
+            "3": $placeSentNames,
+            "4": $placeReceivedNames,
+            "5": $id,
+            "6": $sourceRef
         }
         
 let $end-time := util:system-dateTime()
